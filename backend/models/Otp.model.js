@@ -1,21 +1,11 @@
 import mongoose from "mongoose";
 
-const otpSchema = new mongoose.Schema({
-    email: {
-        type: String,
-        required: true,
-        unique: false, // A user might request multiple OTPs
-    },
-    otp: {
-        type: String,
-        required: true,
-    },
-    createdAt: {
-        type: Date,
-        default: Date.now,
-        expires: 1200, // OTP expires after 20 minutes (1200 seconds)
-    }
+const OTPSchema = new mongoose.Schema({
+    email: { type: String, required: true },
+    otp: { type: String, required: true },
+    expiresAt: { type: Date, required: true, index: { expires: "20m" } }, // Auto-delete after 20 min
 });
 
-const Otp = mongoose.models.Otp || mongoose.model("OTP", otpSchema);
+
+const Otp = mongoose.models.Otp || mongoose.model("OTP", OTPSchema);
 export default Otp;

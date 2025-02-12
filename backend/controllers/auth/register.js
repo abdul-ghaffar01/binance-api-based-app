@@ -1,6 +1,7 @@
 import connectToDatabase from "../../db.js";
 import User from "../../models/User.model.js";
 import bcrypt from "bcrypt";
+import generateOTP from "../../utils/generate_otp.js";
 
 
 export default async function registerController(req, res) {
@@ -66,6 +67,9 @@ export default async function registerController(req, res) {
 
         // Saving the user in the database
         await newUser.save();
+
+        // Sending the otp for email verification
+        generateOTP(email); // this will generate and will automatically send to this email
 
         // Sending the response on successfull saving
         res.status(201).json({

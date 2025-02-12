@@ -21,6 +21,6 @@ router.get("/verify-jwt", verifyJwtController)
 router.post("/forget-pass", forgetPassController)
 
 // Route to verify the email
-router.post("verify-email", verifyEmailController)
+router.post("/verify-email", verifyEmailController)
 
 export default router

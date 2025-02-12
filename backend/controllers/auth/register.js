@@ -48,7 +48,7 @@ export default async function registerController(req, res) {
         email,
         password: hashPass,
         apiKey,
-        profilePicture: profilePicture ? `/uploads/${profilePicture.filename}` : null
+        profilePicture: profilePicture ? `/${profilePicture.filename}` : null
     })
 
     try {
@@ -80,5 +80,4 @@ export default async function registerController(req, res) {
             msg: "Couldn't create account unkown error occured"
         })
     }
-
 }

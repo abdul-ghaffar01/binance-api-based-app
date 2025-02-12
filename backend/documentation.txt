@@ -3,6 +3,7 @@
 /auth/login
 /auth/register
 /auth/forget-pass
+/auth/verify-email
 
 
 ----- User routes

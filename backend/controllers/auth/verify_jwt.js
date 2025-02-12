@@ -1,4 +1,4 @@
-import { verifyJwt } from "../utils/verify_jwt.js";
+import { verifyJwt } from "../../utils/verify_jwt.js"
 
 export default function verifyJwtController(req, res) {
     /* 

@@ -1,17 +1,27 @@
 import express from "express";
 import userRoutes from "./routes/userRoutes.js"
+import authRoutes from "./routes/authRoutes.js"
+import dotenv from "dotenv";
+dotenv.config();
 
-const PORT = 4001;
+const PORT = process.env.PORT || 4001;
 const app = express();
 
 // Middleware to parse JSON
 app.use(express.json());
 
-// All the routes
+// ---------- All the routes
+
+// User routes
 app.use("/user", userRoutes);
 
+// Authentication routes
+app.use("/auth", authRoutes);
+
+// ---------- Routes end here
 
 
+// ---------- Listening to the requests
 app.listen(PORT, () => {
     console.log("Listening to the port ", PORT);
 })

@@ -1,0 +1,15 @@
+----- Authentication routes 
+/auth/verify-jwt 
+/auth/login
+/auth/register
+/auth/forget-pass
+/auth/verify-code
+
+
+----- User routes
+
+
+----- Utils methods
+verifJwt()
+generateOTP()
+

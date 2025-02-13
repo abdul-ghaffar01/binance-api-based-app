@@ -16,9 +16,9 @@ export default async function generateOTP(email) {
         await newOTP.save();
 
         await sendMail("Otp for verification", "Your verification otp is " + otp, email);
-        return { success: 1, otp, msg: "Otp sent successfully" };
+        return true;
     } catch (error) {
         console.error("Error generating OTP:", error);
-        return { success: 0, msg: "Failed to generate OTP", error: error.message };
+        return false;
     }
 }

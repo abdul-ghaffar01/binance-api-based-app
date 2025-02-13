@@ -69,7 +69,7 @@ export default async function registerController(req, res) {
         await newUser.save();
 
         // Sending the otp for email verification
-        generateOTP(email); // this will generate and will automatically send to this email
+        generateOTP(email); // this will generate otp and will automatically send to this email
 
         // Sending the response on successfull saving
         res.status(201).json({

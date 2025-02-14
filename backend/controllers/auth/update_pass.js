@@ -7,6 +7,7 @@ import bcrypt from "bcrypt"
 export default async function updatePassController(req, res) {
 
     /*
+        PATCH REQ
         Payload :
         {
             password: {clients new password},    
@@ -24,7 +25,6 @@ export default async function updatePassController(req, res) {
 
     // Extracting token from headers
     const token = req.headers.authorization?.split(" ")[1]; // Extracts 'Bearer <token>'
-
 
     try {
         // Extracting the email from the token

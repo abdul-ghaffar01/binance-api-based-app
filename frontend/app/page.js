@@ -1,7 +1,9 @@
+import WebSocketClient from "./webSocketClient";
+
 export default function Home() {
   return (
     <div>
-      Frontend working fine
+      <WebSocketClient />
     </div>
   );
 }

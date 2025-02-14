@@ -14,3 +14,36 @@ verifJwt()
 generateOTP()
 verifyOTP()
 
+
+----- Endpoint to hit on binance
+link -> https://developers.binance.com/docs/binance-spot-api-docs/rest-api/general-endpoints#check-server-time
+
+/api/v3/exchangeInfo  -> gives all the exchange information
+Parameters :
+    1. symbol
+        Example: curl -X GET "https://api.binance.com/api/v3/exchangeInfo?symbol=BNBBTC"
+    
+    2. symbols
+        Examples: curl -X GET "https://api.binance.com/api/v3/exchangeInfo?symbols=%5B%22BNBBTC%22,%22BTCUSDT%22%5D"
+            or
+        curl -g -X GET 'https://api.binance.com/api/v3/exchangeInfo?symbols=["BTCUSDT","BNBBTC"]'
+    
+    3. permissions
+        Examples: curl -X GET "https://api.binance.com/api/v3/exchangeInfo?permissions=SPOT"
+            or
+        curl -X GET "https://api.binance.com/api/v3/exchangeInfo?permissions=%5B%22MARGIN%22%2C%22LEVERAGED%22%5D"
+            or
+        curl -g -X GET 'https://api.binance.com/api/v3/exchangeInfo?permissions=["MARGIN","LEVERAGED"]'
+    
+    4. showPermissionSets
+        Controls whether the content of the permissionSets field is populated or not. Defaults to true
+    
+    5. symbolStatus
+        Filters symbols that have this tradingStatus. Valid values: TRADING, HALT, BREAK
+        Cannot be used in combination with symbols or symbol.
+
+/api/v3/trades?symbol=BTCUSDT  -> gives the recent trades on a pair
+wss://stream.binance.com:9443/ws/btcusdt@trade  -> same using websockets
+
+
+api/v3/klines?symbol=BTCUSDT&interval=1m  -> give the candlestick value

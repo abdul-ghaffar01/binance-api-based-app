@@ -10,6 +10,7 @@ export const theme = {
     colors: {
       background: "var(--background)",
       foreground: "var(--foreground)",
+      neutral: "var(--neutral)",
       primary: "var(--primary)",
       secondary: "var(--secondary)",
       box: "var(--box)",

@@ -17,7 +17,7 @@ router.post("/login", loginController);
 router.post("/register", upload.single("profilePicture"), registerController);
 
 // Route to verify the jwt token
-router.get("/verify-jwt", verifyJwtController);
+router.get("/verify-token", verifyJwtController);
 
 // Route to verify the email
 router.post("/verify-email", verifyEmailController);

@@ -14,7 +14,7 @@ const Button = ({
     className = "",
 }) => {
     const baseStyles =
-        "flex items-center justify-center gap-2 relative rounded-md font-medium transition-all duration-300 focus:outline-none";
+        "flex items-center justify-center gap-2 relative rounded-md font-medium transition-all duration-300 focus:outline-none hover:opacity-80";
 
     const sizeStyles = {
         sm: "px-3 py-1 text-sm",

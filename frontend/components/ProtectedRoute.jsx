@@ -6,7 +6,7 @@ import Loader from "./ui/Loader";
 
 const ProtectedRoute = ({ children }) => {
     const router = useRouter();
-    const token = useAuthStore((state) => state.token); // ✅ Fetch JWT from Zustand
+    const token = useAuthStore((state) => state.token);
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {

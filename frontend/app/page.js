@@ -12,7 +12,7 @@ export default function ProfileCard() {
   }
   const submited = () => { console.log("clicked the button") }
   return (
-    <div className="flex items-center justify-center min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-background text-foreground">
       <Login />
 
     </div>

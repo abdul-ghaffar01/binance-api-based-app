@@ -6,7 +6,7 @@ export function ThemeProvider({ children }) {
     const { theme } = useThemeStore();
 
     return (
-        <html lang="en" className={theme}>
+        <html lang="en" className={`${theme} bg-background text-foreground`}>
             <body>{children}</body>
         </html>
     );

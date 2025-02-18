@@ -12,6 +12,7 @@ const Button = ({
     disabled = false,
     icon: Icon,
     className = "",
+    children
 }) => {
     const baseStyles =
         "flex items-center justify-center gap-2 relative rounded-md font-medium transition-all duration-300 focus:outline-none hover:opacity-80";
@@ -61,6 +62,9 @@ const Button = ({
                     <span className="animate-spin h-4 w-4 border-2 border-white border-t-transparent rounded-full"></span>
                 </span>
             )}
+
+            {/* If children are given then showing them */}
+            {children}
         </button>
     );
 };

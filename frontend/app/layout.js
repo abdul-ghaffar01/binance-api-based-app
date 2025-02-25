@@ -11,6 +11,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <ThemeProvider>
+      <p className="bg-purple-700 text-slate-200 text-center font-bold fixed bottom-0 w-full p-2">Work in progress! The project is still under development, with more updates coming soon.</p>
       <Navbar />
       {children}
     </ThemeProvider>

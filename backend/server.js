@@ -25,11 +25,7 @@ app.use("/binance", binanceRoutes)
 
 // ---------- Routes end here
 
-
-// ---------- Listening to the requests
-app.listen(PORT, () => {
-    console.log("Listening to the port ", PORT);
-})
+export { app };
 
 
 
